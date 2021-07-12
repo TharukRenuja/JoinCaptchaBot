@@ -1086,6 +1086,8 @@ def receive_poll_answer(update: Update, context: CallbackContext):
     # Check if user vote the correct option
     if option_answer == poll_correct_option:
         printts("[{}] User {} solved a poll challenge.".format(chat_id, user_name))
+        tlg_restrict_user(bot, chat_id, user_id, send_msg=True, send_media=True,
+        send_stickers_gifs=True, insert_links=True)
         bot_msg = TEXT[lang]["CAPTCHA_SOLVED"].format(user_name)
         if rm_result_msg:
             tlg_send_selfdestruct_msg(bot, chat_id, bot_msg)
