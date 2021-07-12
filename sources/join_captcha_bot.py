@@ -688,6 +688,10 @@ def chat_member_status_change(update: Update, context: CallbackContext):
         if sent_result["msg"] is None:
             send_problem = True
     elif captcha_mode == "poll":
+        #MuteUser
+        tlg_restrict_user(bot, chat_id, join_user_id, send_msg=False, send_media=False,
+        send_stickers_gifs=False, insert_links=False, send_polls=False,
+        invite_members=False, pin_messages=False, change_group_info=False)
         poll_question = get_chat_config(chat_id, "Poll_Q")
         poll_options = get_chat_config(chat_id, "Poll_A")
         poll_correct_option = get_chat_config(chat_id, "Poll_C_A")
@@ -1122,7 +1126,7 @@ def receive_poll_answer(update: Update, context: CallbackContext):
         # Wait 10s
         sleep(10)
         # Try to kick the user
-        kick_result = tlg_kick_user(bot, chat_id, user_id)
+        kick_result = tlg_ban_user(bot, chat_id, user_id)
         if kick_result["error"] == "":
             # Kick success
             msg_text = TEXT[lang]["CAPTCHA_POLL_FAIL_1"].format(user_name)
