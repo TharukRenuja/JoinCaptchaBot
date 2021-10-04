@@ -77,7 +77,8 @@ from tlgbotutils import (
     tlg_answer_callback_query, tlg_delete_msg, tlg_edit_msg_media,
     tlg_ban_user, tlg_kick_user, tlg_user_is_admin, tlg_leave_chat,
     tlg_restrict_user, tlg_is_valid_user_id_or_alias, tlg_is_valid_group,
-    tlg_alias_in_string, tlg_extract_members_status_change
+    tlg_alias_in_string, tlg_extract_members_status_change,
+    tlg_get_chat_members_count
 )
 
 from constants import (
@@ -492,6 +493,18 @@ def allowed_in_this_group(bot, chat, member_added_by):
         return False
     if is_group_in_banned_list(chat.id):
         printts("[{}] Warning: Bot added to banned group".format(chat.id))
+        return False
+    # Check if Free Bot Limit has been reached
+    num_members = 0
+    max_usr_group = CONST["FREE_LIMIT_MAX_USER_IN_GROUP"]
+    chat_members_count = tlg_get_chat_members_count(bot, chat.id)
+    if chat_members_count["num_members"] is not None:
+        num_members = chat_members_count["num_members"]
+    if num_members > max_usr_group:
+        printts("Warning: Group {} with more than {} users ({} users). Leaving it...".format(
+                chat.id, max_usr_group, num_members))
+        msg_text = CONST["FREE_LIMIT_REACH"].format(chat.id, max_usr_group+1)
+        tlg_send_msg(bot, chat.id, msg_text)
         return False
     return True
 
