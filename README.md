@@ -1,4 +1,4 @@
-# TLG_JoinCaptchaBot
+# JoinCaptchaBot
 
 <p align="center">
     <img width="100%" height="100%" src="https://gist.githubusercontent.com/J-Rios/05d7a8fc04166fa19f31a9608033d10b/raw/32dee32a530c0a0994736fe2d02a1747478bd0e3/captchas.png">
@@ -29,7 +29,7 @@ To generate Captchas, the Bot uses [multicolor_captcha_generator library](https:
 3. Go to project sources and give execution permission to usage scripts:
 
     ```bash
-    cd TLG_JoinCaptchaBot/sources
+    cd JoinCaptchaBot/sources
     chmod +x run status kill
     ```
 
@@ -209,4 +209,4 @@ To add support for a new language you must follow this steps:
 
 - [J-Rios](https://github.com/J-Rios)
 
-- [subinps](https://github.com/subinps) & All [Contributers](https://github.com/TharukRenuja/JoinCaptchaBot/graphs/contributors)
+- [subinps](https://github.com/subinps) & [All Contributers](https://github.com/TharukRenuja/JoinCaptchaBot/graphs/contributors)
