@@ -22,8 +22,8 @@ To generate Captchas, the Bot uses [multicolor_captcha_generator library](https:
 2. Get the project and install JoinCaptchaBot requirements:
 
     ```bash
-    git clone https://github.com/J-Rios/TLG_JoinCaptchaBot
-    pip install -r TLG_JoinCaptchaBot/requirements.txt
+    git clone https://github.com/TharukRenuja/JoinCaptchaBot
+    pip install -r JoinCaptchaBot/requirements.txt
     ```
 
 3. Go to project sources and give execution permission to usage scripts:
@@ -159,7 +159,7 @@ To add support for a new language you must follow this steps:
 
 1. Fork the project repository, clone it and create a new branch to work on it (i.e. named language-support-en).
 
-2. Copy from one of the existing language JSON files from [here](https://github.com/J-Rios/TLG_JoinCaptchaBot/tree/master/sources/language) to a new one.
+2. Copy from one of the existing language JSON files from [here](https://github.com/TharukRenuja/JoinCaptchaBot/tree/master/sources/language) to a new one.
 
 3. Change the name of that file for the language ISO Code of the language that you want.
 
@@ -207,5 +207,6 @@ To add support for a new language you must follow this steps:
 
 ## Credits
 
--[J-Rios](https://github.com/J-Rios)
--[subinps](https://github.com/subinps) & All [Contributers](https://github.com/TharukRenuja/JoinCaptchaBot/graphs/contributors)
+- [J-Rios](https://github.com/J-Rios)
+
+- [subinps](https://github.com/subinps) & All [Contributers](https://github.com/TharukRenuja/JoinCaptchaBot/graphs/contributors)
