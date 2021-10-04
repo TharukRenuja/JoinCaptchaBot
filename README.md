@@ -7,19 +7,6 @@
 Bot to verify if a new user, who joins a group, is a human.
 The Bot sends an image captcha for each new user, and kicks any of them that can't solve the captcha in a specified amount of time. Also, any message that contains an URL sent by a new "user" before captcha completion will be considered Spam and will be deleted.
 
-## Donate
-
-Do you like this Bot? Buy me a coffee :)
-
-BuyMeACoffee:
-[https://www.buymeacoffee.com/joincaptchabot](https://www.buymeacoffee.com/joincaptchabot)
-
-Paypal:
-[https://www.paypal.me/josrios](https://www.paypal.me/josrios)
-
-BTC:
-3N9wf3FunR6YNXonquBeWammaBZVzTXTyR
-
 ## Installation
 
 Note: Use Python 3.6 or above to install and run the Bot, previous version are unsupported.
@@ -217,3 +204,8 @@ To add support for a new language you must follow this steps:
 - Slovak: [@dumontiskooo](https://t.me/dumontiskooo)
 
 - Korean: [@dakeshi](https://github.com/dakeshi)
+
+## Credits
+
+-[J-Rios](https://github.com/J-Rios)
+-[subinps](https://github.com/subinps) & All [Contributers](https://github.com/TharukRenuja/JoinCaptchaBot/graphs/contributors)
